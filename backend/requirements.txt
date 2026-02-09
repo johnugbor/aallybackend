@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+google-genai
+obd
+python-dotenv
+faiss-cpu
+sentence-transformers
+pypdf
+boto3
+python-multipart
