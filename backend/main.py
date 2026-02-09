@@ -95,7 +95,9 @@ async def websocket_diagnose(websocket: WebSocket):
     except Exception as e:
         print(f"Error: {e}")
         await websocket.close()
-
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy"}
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8080)
